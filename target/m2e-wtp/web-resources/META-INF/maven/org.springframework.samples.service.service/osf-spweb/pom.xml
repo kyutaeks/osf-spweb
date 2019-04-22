@@ -52,7 +52,7 @@
 		</dependency>
 
 		<!-- Other Web dependencies -->
-		<dependency>
+		<dependency> 
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
