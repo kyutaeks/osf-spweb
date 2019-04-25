@@ -14,11 +14,12 @@ import com.osf.web.dao.AddrDAO;
 @Repository
 public class AddrDAOImpl implements AddrDAO {
 	@Autowired
-	private SqlSessionFactory ssf;
+//	private SqlSessionFactory ssf;
+	private SqlSession ss;
 
 	@Override
 	public List<Map<String, String>> selectAddrList() {
-		SqlSession ss = ssf.openSession();
+//		SqlSession ss = ssf.openSession();
 		Map<String, String> param = new HashMap<String, String>();
 		param.put("adNum", "10");
 		param.put("adSido", "부산광역시");
