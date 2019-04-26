@@ -5,13 +5,13 @@ import java.util.Map;
 
 public interface CustomerDAO {
 
-	public List<Map<String, String>> selectCustomerList();
+	List<Map<String, String>> selectCustomerList();
 
-	public Map<String, String> selectCustomer();
+	Map<String, String> selectCustomer(Integer ciNum);
 
-	public int insertCustomer();
+	int insertCustomer(Map<String, String> ci);
 
-	public int deleteCustomer();
+	int deleteCustomer(Integer ciNum);
 
-	public int updateCustomer();
+	int updateCustomer(Map<String, String> ci);
 }

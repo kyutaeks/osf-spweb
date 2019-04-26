@@ -20,23 +20,23 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Map<String, String> selectCustomer() {
-		return cdao.selectCustomer();
+	public Map<String, String> selectCustomer(Integer ciNum) {
+		return cdao.selectCustomer(ciNum);
 	}
 
 	@Override
-	public int insertCustomer() {
-		return cdao.insertCustomer();
+	public int insertCustomer(Map<String, String> ci) {
+		return cdao.insertCustomer(ci);
 	}
 
 	@Override
-	public int deleteCustomer() {
-		return cdao.deleteCustomer();
+	public int deleteCustomer(Integer ciNum) {
+		return cdao.deleteCustomer(ciNum);
 	}
 
 	@Override
-	public int updateCustomer() {
-		return cdao.updateCustomer();
+	public int updateCustomer(Map<String, String> ci) {
+		return cdao.updateCustomer(ci);
 	}
 
 }

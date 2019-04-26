@@ -24,25 +24,24 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	@Override
-	public Map<String, String> selectCustomer() {
-		// TODO Auto-generated method stub
+	public Map<String, String> selectCustomer(Integer ciNum) {
 		return null;
 	}
 
 	@Override
-	public int insertCustomer() {
+	public int insertCustomer(Map<String, String> ci) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int deleteCustomer() {
+	public int deleteCustomer(Integer ciNum) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateCustomer() {
+	public int updateCustomer(Map<String, String> ci) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

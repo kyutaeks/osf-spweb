@@ -3,16 +3,15 @@ package com.osf.web.service;
 import java.util.List;
 import java.util.Map;
 
-
 public interface CustomerService {
 
-	 List<Map<String, String>> selectCustomerList();
+	List<Map<String, String>> selectCustomerList();
 
-	 Map<String, String> selectCustomer();
+	Map<String, String> selectCustomer(Integer ciNum);
 
-	 int insertCustomer();
+	int insertCustomer(Map<String, String> ci);
 
-	 int deleteCustomer();
+	int deleteCustomer(Integer ciNum);
 
-	 int updateCustomer();
+	int updateCustomer(Map<String, String> ci);
 }
