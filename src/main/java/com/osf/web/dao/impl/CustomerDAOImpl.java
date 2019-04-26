@@ -20,7 +20,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Map<String, String> param = new HashMap<String, String>();
 		param.put("ciNum", "1");
 		param.put("ciID", "asd123");
-		return ss.selectList("cust.selectCustomerList", param);
+		return ss.selectList("customer.selectCustomerList");
+
 	}
 
 	@Override

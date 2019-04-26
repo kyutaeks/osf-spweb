@@ -20,16 +20,16 @@ public class CustomerController {
 	@Autowired
 	private CustomerService cs;
 
-	@RequestMapping(value = "/cust/list", method = RequestMethod.GET)
-	public String goCustList(Model m) {
-		m.addAttribute("custList", cs.selectCustomerList());
-		return "/cust/list";
+	@RequestMapping("/customer/list")
+	public String customerList(Model m) {
+		m.addAttribute("list", cs.selectCustomerList());
+		return "/uri/customer/list";
 	}
 
 	@RequestMapping(value = "/customer/insert", method = RequestMethod.POST)
 	public String joinCustomer(Model m, @RequestParam Map ci) {
 		log.debug("param=>{}", ci);
 		m.addAttribute("insertInfo", cs.insertCustomer(ci));
-		return "/cust/insert";
+		return "/uri/customer/insert";
 	}
 }
