@@ -15,12 +15,16 @@ public class EmpServiceImpl implements EmpService {
 
 	@Autowired
 	private EmpDAO edao;
-	
+
 	@Override
 	public boolean loginEmp(Map<String, String> emp, HttpSession hs) {
 		Map<String, String> dbEmp = edao.selectEmpById(emp);
 		if (dbEmp == null || !dbEmp.get("PWD").equals(emp.get("pwd"))) {
 			return false;
+		}
+		if ("2".equals(dbEmp.get("LVL"))) {
+			emp.put("lvl", "1");
+			hs.setAttribute("empList", edao.selectEmpList(emp));
 		}
 		hs.setAttribute("emp", dbEmp);
 		return true;
