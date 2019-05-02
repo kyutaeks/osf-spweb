@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,13 +27,19 @@ public class EmpContoller {
 
 	@RequestMapping(value = "/emp/login", method = RequestMethod.POST)
 	public @ResponseBody Map<String, String> doLogin(@RequestParam Map<String, String> params, HttpSession hs) {
-			Map<String, String> rMap = new HashMap<String, String>();
-			rMap.put("result", "false");
-			if (es.loginEmp(params, hs)) {
-				rMap.put("result", "true");
-			}
-			return rMap;
+		Map<String, String> rMap = new HashMap<String, String>();
+		rMap.put("result", "false");
+		if (es.loginEmp(params, hs)) {
+			rMap.put("result", "true");
 		}
+		return rMap;
+	}
+
+	@RequestMapping(value = "/emp/insert", method = RequestMethod.GET)
+	public String goInsert(Model m) {
+		m.addAttribute("deptList", es.selectDeptList());
+		return "/uri/emp/insert";
+	}
 
 	@RequestMapping("/emp/json")
 	public @ResponseBody List<String> doJson() {

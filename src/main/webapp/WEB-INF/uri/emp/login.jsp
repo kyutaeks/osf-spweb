@@ -41,12 +41,12 @@
 			xhr.open('POST','/emp/login');
 			xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
 			xhr.onreadystatechange = function(){
-				if(xhr.readyState=4){
+				if(xhr.readyState==4){
 					var obj = JSON.parse(xhr.response);
 					if(obj.result==='false'){
 						alert('아이디나 비밀번호가 잘못되었습니다.');
 						idObj.value='';
-						pwdObj.vlaue='';
+						pwdObj.value='';
 						idObj.focus();
 					}else{
 						location.href="/uri/index"
