@@ -23,13 +23,11 @@
 		<label for="num" class="sr-only">사번</label> 
 		<input type="text" id="num" class="form-control" placeholder="사번" required autofocus name='num'><br>
 		<label for="ID" class="sr-only">ID</label> 
-		<input type="text" id="id" class="form-control" placeholder="ID" required autofocus name='ID'><br>
+		<input type="text" id="id" class="form-control" placeholder="ID" required name='ID'><br>
 		<label for="PWD" class="sr-only">PWD</label> 
-		<input type="password" id="id" class="form-control" placeholder="PASSWORD" required autofocus name='PASSWORD'><br>
+		<input type="password" id="id" class="form-control" placeholder="PASSWORD" required name='PASSWORD'><br>
 		<label for="JOB" class="sr-only">JOB</label>
-		<input type="selectbox" id="id" class="form-control" placeholder="PASSWORD" required autofocus name='PASSWORD'><br>
-		
-		<!-- <select name="job">
+			<!-- <select name="job" class="sr-only">
 						<option value="">직업선택</option>
 						<option value="사장">사장</option>
 						<option value="부장">부장</option>
@@ -37,14 +35,14 @@
 						<option value="과장">과장</option>
 						<option value="대리">대리</option>
 						<option value="사원">사원</option>
-		</select> 
-		 -->
+			</select>  -->
 		
 		
+		
+		<label for="hiredate" class="sr-only">hiredate</label> 
+		<input type="date" id="hiredate" class="form-control" placeholder="hiredate" required name='hiredate'><br>
 		<label for="id" class="sr-only">ID</label> 
-		<input type="password" id="id" class="form-control" placeholder="ID" required autofocus name='ID'><br>
-		<label for="id" class="sr-only">ID</label> 
-		<input type="password" id="id" class="form-control" placeholder="ID" required autofocus name='ID'><br>
+		<input type="password" id="id" class="form-control" placeholder="ID" required name='ID'><br>
 
 		<!-- <table border="1">
 
